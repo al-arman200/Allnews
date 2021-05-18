@@ -1,0 +1,19 @@
+//// -- LEVEL 1
+//// -- Tables and References
+
+// Creating tables
+Table agency as U {
+  id int [pk, increment] // auto-increment
+  address_site varchar
+  name varchar
+}
+
+Table news {
+  id int [pk, increment] // auto-increment
+  title varchar
+  link varchar
+  typenews varchar
+  pub_date datetime
+ }
+
+Ref: "agency"."id" < "news"."id"
