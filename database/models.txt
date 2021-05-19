@@ -6,6 +6,7 @@ Table agency as U {
   id int [pk, increment] // auto-increment
   address_site varchar
   name varchar
+  description varchar
 }
 
 Table news {
