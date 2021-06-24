@@ -16,7 +16,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <img src="sh2.png" class="rounded"  alt="">
+                        {% load static %}
+                        <img src="{% static 'onlinenews/sh2.png' %}" class="rounded"  alt="">
+                        
                     </div>
                     <div class="col">
                     </div>
@@ -27,63 +29,76 @@
                         <p>همه خبر ها را یکجا دنبال کنید</p>
                     </div>
                 </div>
-
-
             </div>
         </div>
 
-          <div class="container text-right">
+          <div class="container-fluid text-right">
             <div class="alert alert-success alert-dismissible fade show">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
                 <p>پروژه درس برنامه سازی سیستم و شی گرایی استاد آقای برهلیان</p>
                 <p>دانشجو آرمان علی زاده 9822103311029</p>
-              </div>
-              
-            <div class="btn-group-vertical ">
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="btn-group-vertical w-100">
                 <button class="btn btn-dark" >
                     <span class="spinner-grow spinner-grow-sm"></span>
                     زنده اخبار اقتصادی
-                  </button>
+                </button>
 
                   {% for title,link in latest_news_list_E %}
-                      <a target="_blank"  href="{{ link }}" class="btn btn-outline-secondary" role="button">{{ title }}</a>
+                  <a target="_blank"  href="{{ link }}" class="btn btn-outline-secondary text-right" role="button">{{ title }}</a>
                   {% endfor %}
-              </div>  
-              <div class="btn-group-vertical">
-                 <button class="btn btn-dark" >
+                </div>  
+              </div>
+              <div class="col">
+                <div class="btn-group-vertical w-100">
+                  <button class="btn btn-dark" >
                     <span class="spinner-grow spinner-grow-sm"></span>
                     زنده اخبار فناوری
                   </button>
 
-                  {% for title,link in latest_news_list_T %}
-                      <a target="_blank"  href="{{ link }}" class="btn btn-outline-secondary" role="button">{{ title }}</a>
-                  {% endfor %}
+                    {% for title,link in latest_news_list_T %}
+                    <a target="_blank"  href="{{ link }}" class="btn btn-outline-secondary text-right" role="button">{{ title }}</a>
+                    {% endfor %}
 
                 </div>   
-              <br><br>
-              <div class="btn-group-vertical">
-                <button class="btn btn-dark" >
+              </div>
+            </div>
+                    <br><br>
+            <div class="row">
+                <div class="col">
+                  <div class="btn-group-vertical w-100">
+                  <button class="btn btn-dark" >
                     <span class="spinner-grow spinner-grow-sm"></span>
                     زنده اخبار ورزشی 
                   </button> 
 
-                  {% for title,link in latest_news_list_S %}
-                      <a target="_blank"  href="{{ link }}" class="btn btn-outline-secondary" role="button">{{ title }}</a>
-                  {% endfor %}
-              </div>         
-              <div class="btn-group-vertical text-right">
-                <button class="btn btn-dark" >
+                    {% for title,link in latest_news_list_S %}
+                    <a target="_blank"  href="{{ link }}" class="btn btn-outline-secondary text-right" role="button">{{ title }}</a>
+                    {% endfor %}
+
+                  </div> 
+                </div>
+
+              <div class="col">
+                <div class="btn-group-vertical text-right w-100">
+                  <button class="btn btn-dark" >
                     <span class="spinner-grow spinner-grow-sm"></span>
                     زنده اخبار سیاسی
                   </button>
 
-                  {% for title,link in latest_news_list_P %}
-                      <a target="_blank"  href="{{ link }}" class="btn btn-outline-secondary" role="button">{{ title }}</a>
-                  {% endfor %}
+                    {% for title,link in latest_news_list_P %}
+                    <a target="_blank"  href="{{ link }}" class="btn btn-outline-secondary text-right" role="button">{{ title }}</a>
+                    {% endfor %}
 
-                </div>   
+                </div>
+                </div> 
+              </div>  
+              </div>
           </div>
-            <br> <br>
+            </div>
+            <br><br>
           <div class="container-fluid bg-dark p-5 top text-white-50  text-right">
             <p>پروژه درس برنامه سازی سیستم و شی گرایی استاد آقای برهلیان</p>
             <p>دانشجو آرمان علی زاده 9822103311029</p>
