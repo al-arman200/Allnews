@@ -56,7 +56,7 @@ class webScraping():
 
     def desTagA(self ,des):
         if len(des)>70 :
-            return des[:68]+'...'
+            return des[:80]
         else :
             count = 70- len(des)
             for i in range(count):
